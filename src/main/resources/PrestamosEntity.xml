@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 version="3.0">
+
+    <entity class="Hibernate.PrestamosEntity">
+        <table name="prestamos" schema="biblioteca" catalog=""/>
+        <attributes>
+            <id name="idPrestamo">
+                <column name="idPrestamo"/>
+            </id>
+            <basic name="codigoLibro">
+                <column name="codigoLibro"/>
+            </basic>
+            <basic name="codigoSocio">
+                <column name="codigoSocio"/>
+            </basic>
+            <basic name="fechaInicioPrestamo">
+                <column name="fechaInicioPrestamo"/>
+            </basic>
+            <basic name="fechaFinPrestamo">
+                <column name="fechaFinPrestamo"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
