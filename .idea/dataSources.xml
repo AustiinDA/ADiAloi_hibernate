@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="biblioteca@localhost " uuid="ba1593a4-f022-4ecf-add5-871dd4a2d021">
-      <driver-ref>mysql.8</driver-ref>
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="bffad02b-df16-4c62-a3d6-2429bec81a4c">
+      <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Alumno_FP/IdeaProjects/ADiAloi_hibernate/src/main/resources/hibernate.cfg.xml</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/biblioteca</jdbc-url>
       <jdbc-additional-properties>
-        <property name="APPROVED_DRIVER" value="mysql.8" />
+        <property name="APPROVED_DRIVER" value="mysql" />
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>

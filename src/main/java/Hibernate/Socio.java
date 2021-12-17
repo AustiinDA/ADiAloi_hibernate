@@ -1,28 +1,40 @@
 package Hibernate;
 
+import javax.persistence.*;
 import java.sql.Date;
 
+@Entity
+@Table(name = "socios", schema = "biblioteca", catalog = "")
 public class Socio {
-
-    int codigoSocio, idSocio;
-    String Nombre, Apellidos, Domicilio, Telefono;
-    Date fechaNacimiento;
-    //Constructor de los Socios
-
-    public Socio(int idSocio, int codigoSocio, String nombre, String apellidos, String domicilio, String telefono, Date fechaNacimiento) {
-        this.idSocio = idSocio;
-        this.codigoSocio = codigoSocio;
-        Nombre = nombre;
-        Apellidos = apellidos;
-        Domicilio = domicilio;
-        Telefono = telefono;
-        this.fechaNacimiento = fechaNacimiento;
-    }
-    //Getters y setters
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "idSocio")
+    private int idSocio;
+    @Basic
+    @Column(name = "codigoSocio")
+    private int codigoSocio;
+    @Basic
+    @Column(name = "Nombre")
+    private String nombre;
+    @Basic
+    @Column(name = "Apellidos")
+    private String apellidos;
+    @Basic
+    @Column(name = "fechaNacimiento")
+    private Date fechaNacimiento;
+    @Basic
+    @Column(name = "Domicilio")
+    private String domicilio;
+    @Basic
+    @Column(name = "Telefono")
+    private String telefono;
 
     public int getIdSocio() {
         return idSocio;
+    }
+
+    public void setIdSocio(int idSocio) {
+        this.idSocio = idSocio;
     }
 
     public int getCodigoSocio() {
@@ -34,35 +46,19 @@ public class Socio {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
     public String getApellidos() {
-        return Apellidos;
+        return apellidos;
     }
 
     public void setApellidos(String apellidos) {
-        Apellidos = apellidos;
-    }
-
-    public String getDomicilio() {
-        return Domicilio;
-    }
-
-    public void setDomicilio(String domicilio) {
-        Domicilio = domicilio;
-    }
-
-    public String getTelefono() {
-        return Telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        Telefono = telefono;
+        this.apellidos = apellidos;
     }
 
     public Date getFechaNacimiento() {
@@ -73,16 +69,19 @@ public class Socio {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    @Override
-    public String toString() {
-        return "Socio{" +
-                "codigo=" + codigoSocio +
-                ", idSocio=" + idSocio +
-                ", Nombre='" + Nombre + '\'' +
-                ", Apellidos='" + Apellidos + '\'' +
-                ", Domicilio='" + Domicilio + '\'' +
-                ", Telefono='" + Telefono + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
-                '}';
+    public String getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(String domicilio) {
+        this.domicilio = domicilio;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 }

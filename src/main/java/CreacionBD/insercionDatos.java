@@ -1,4 +1,4 @@
-package Hibernate;
+package CreacionBD;
 
 import java.sql.Connection;
 import java.sql.Date;

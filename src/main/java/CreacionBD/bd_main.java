@@ -1,6 +1,7 @@
-package Hibernate;
+package CreacionBD;
 
 import java.sql.SQLException;
+/*
 
 public class bd_main {
     public static void main(String[] args) throws SQLException {
@@ -30,4 +31,4 @@ public class bd_main {
         Consultas.listadoLibrosPrestadosExipirados();
         Consultas.listadoLibrosPrestadosExipiradosPorSocio();
     }
-}
+}*/

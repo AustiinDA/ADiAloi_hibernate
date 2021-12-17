@@ -1,26 +1,34 @@
 package Hibernate;
 
+import javax.persistence.*;
 import java.sql.Date;
 
+@Entity
+@Table(name = "prestamos", schema = "biblioteca", catalog = "")
 public class Prestamo {
-
-    int idPrestamo, codigoLibro, codigoSocio;
-    Date fechaInicio, fechaFin;
-
-    //Constructor de los Prestamos
-
-    public Prestamo(int idPrestamo, int codigoLibro, int codigoSocio, Date fechaInicio, Date fechaFin) {
-        this.idPrestamo = idPrestamo;
-        this.codigoLibro = codigoLibro;
-        this.codigoSocio = codigoSocio;
-        this.fechaInicio = fechaInicio;
-        this.fechaFin = fechaFin;
-    }
-    //Getters y setters
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "idPrestamo")
+    private int idPrestamo;
+    @Basic
+    @Column(name = "codigoLibro")
+    private int codigoLibro;
+    @Basic
+    @Column(name = "codigoSocio")
+    private int codigoSocio;
+    @Basic
+    @Column(name = "fechaInicioPrestamo")
+    private Date fechaInicioPrestamo;
+    @Basic
+    @Column(name = "fechaFinPrestamo")
+    private Date fechaFinPrestamo;
 
     public int getIdPrestamo() {
         return idPrestamo;
+    }
+
+    public void setIdPrestamo(int idPrestamo) {
+        this.idPrestamo = idPrestamo;
     }
 
     public int getCodigoLibro() {
@@ -39,30 +47,19 @@ public class Prestamo {
         this.codigoSocio = codigoSocio;
     }
 
-    public Date getFechaInicio() {
-        return fechaInicio;
+    public Date getFechaInicioPrestamo() {
+        return fechaInicioPrestamo;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public void setFechaInicioPrestamo(Date fechaInicioPrestamo) {
+        this.fechaInicioPrestamo = fechaInicioPrestamo;
     }
 
-    public Date getFechaFin() {
-        return fechaFin;
+    public Date getFechaFinPrestamo() {
+        return fechaFinPrestamo;
     }
 
-    public void setFechaFin(Date fechaFin) {
-        this.fechaFin = fechaFin;
-    }
-
-    @Override
-    public String toString() {
-        return "Prestamo{" +
-                "idPrestamo=" + idPrestamo +
-                ", codigoLibro=" + codigoLibro +
-                ", codigoSocio=" + codigoSocio +
-                ", fechaInicio=" + fechaInicio +
-                ", fechaFin=" + fechaFin +
-                '}';
+    public void setFechaFinPrestamo(Date fechaFinPrestamo) {
+        this.fechaFinPrestamo = fechaFinPrestamo;
     }
 }

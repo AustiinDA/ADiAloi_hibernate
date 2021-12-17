@@ -1,26 +1,42 @@
 package Hibernate;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "libros", schema = "biblioteca", catalog = "")
 public class Libro {
-
-    int idLibro, codigoLibro, Ano, NumEjemplares, NumPaginas;
-    String Titulo, Editorial, ISBN;
-
-    //Constructor de los libros
-    public Libro(int codigoLibro, int idLibro, String titulo, String editorial, String ISBN, int ano, int numEjemplares, int numPaginas) {
-        this.codigoLibro = codigoLibro;
-        this.idLibro = idLibro;
-        Titulo = titulo;
-        Editorial = editorial;
-        this.ISBN = ISBN;
-        Ano = ano;
-        NumEjemplares = numEjemplares;
-        NumPaginas = numPaginas;
-    }
-
-    //Getters y setters
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @Column(name = "idLibro")
+    private int idLibro;
+    @Basic
+    @Column(name = "codigoLibro")
+    private int codigoLibro;
+    @Basic
+    @Column(name = "Titulo")
+    private String titulo;
+    @Basic
+    @Column(name = "Editorial")
+    private String editorial;
+    @Basic
+    @Column(name = "Ano")
+    private Integer ano;
+    @Basic
+    @Column(name = "ISBN")
+    private String isbn;
+    @Basic
+    @Column(name = "NumEjemplares")
+    private Integer numEjemplares;
+    @Basic
+    @Column(name = "NumPaginas")
+    private Integer numPaginas;
 
     public int getIdLibro() {
         return idLibro;
+    }
+
+    public void setIdLibro(int idLibro) {
+        this.idLibro = idLibro;
     }
 
     public int getCodigoLibro() {
@@ -31,63 +47,51 @@ public class Libro {
         this.codigoLibro = codigoLibro;
     }
 
-    public int getAno() {return Ano;}
-
-    public void setAno(int ano) {
-        Ano = ano;
-    }
-
-    public int getNumEjemplares() {
-        return NumEjemplares;
-    }
-
-    public void setNumEjemplares(int numEjemplares) {
-        NumEjemplares = numEjemplares;
-    }
-
-    public int getNumPaginas() {
-        return NumPaginas;
-    }
-
-    public void setNumPaginas(int numPaginas) {
-        NumPaginas = numPaginas;
-    }
-
     public String getTitulo() {
-        return Titulo;
+        return titulo;
     }
 
     public void setTitulo(String titulo) {
-        Titulo = titulo;
+        this.titulo = titulo;
     }
 
     public String getEditorial() {
-        return Editorial;
+        return editorial;
     }
 
     public void setEditorial(String editorial) {
-        Editorial = editorial;
+        this.editorial = editorial;
     }
 
-    public String getISBN() {
-        return ISBN;
+    public Integer getAno() {
+        return ano;
     }
 
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+    public void setAno(Integer ano) {
+        this.ano = ano;
     }
 
-    @Override
-    public String toString() {
-        return "Libro{" +
-                "idLibro=" + idLibro +
-                ", Codigo=" + codigoLibro +
-                ", Año=" + Ano +
-                ", NumEjemplares=" + NumEjemplares +
-                ", NumPaginas=" + NumPaginas +
-                ", Titulo='" + Titulo + '\'' +
-                ", Editorial='" + Editorial + '\'' +
-                ", ISBN='" + ISBN + '\'' +
-                '}';
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public Integer getNumEjemplares() {
+        return numEjemplares;
+    }
+
+    public void setNumEjemplares(Integer numEjemplares) {
+        this.numEjemplares = numEjemplares;
+    }
+
+    public Integer getNumPaginas() {
+        return numPaginas;
+    }
+
+    public void setNumPaginas(Integer numPaginas) {
+        this.numPaginas = numPaginas;
     }
 }

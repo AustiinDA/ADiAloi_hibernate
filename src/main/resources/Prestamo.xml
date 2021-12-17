@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 version="3.0">
+
+    <entity class="Hibernate.Libro">
+        <table name="libros" schema="biblioteca" catalog=""/>
+        <attributes>
+            <id name="idLibro">
+                <column name="idLibro"/>
+            </id>
+            <basic name="codigoLibro">
+                <column name="codigoLibro"/>
+            </basic>
+            <basic name="titulo">
+                <column name="Titulo"/>
+            </basic>
+            <basic name="editorial">
+                <column name="Editorial"/>
+            </basic>
+            <basic name="ano">
+                <column name="Ano"/>
+            </basic>
+            <basic name="isbn">
+                <column name="ISBN"/>
+            </basic>
+            <basic name="numEjemplares">
+                <column name="NumEjemplares"/>
+            </basic>
+            <basic name="numPaginas">
+                <column name="NumPaginas"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="Hibernate.Prestamo">
+        <table name="prestamos" schema="biblioteca" catalog=""/>
+        <attributes>
+            <id name="idPrestamo">
+                <column name="idPrestamo"/>
+            </id>
+            <basic name="codigoLibro">
+                <column name="codigoLibro"/>
+            </basic>
+            <basic name="codigoSocio">
+                <column name="codigoSocio"/>
+            </basic>
+            <basic name="fechaInicioPrestamo">
+                <column name="fechaInicioPrestamo"/>
+            </basic>
+            <basic name="fechaFinPrestamo">
+                <column name="fechaFinPrestamo"/>
+            </basic>
+        </attributes>
+    </entity>
+    <entity class="Hibernate.Socio">
+        <table name="socios" schema="biblioteca" catalog=""/>
+        <attributes>
+            <id name="idSocio">
+                <column name="idSocio"/>
+            </id>
+            <basic name="codigoSocio">
+                <column name="codigoSocio"/>
+            </basic>
+            <basic name="nombre">
+                <column name="Nombre"/>
+            </basic>
+            <basic name="apellidos">
+                <column name="Apellidos"/>
+            </basic>
+            <basic name="fechaNacimiento">
+                <column name="fechaNacimiento"/>
+            </basic>
+            <basic name="domicilio">
+                <column name="Domicilio"/>
+            </basic>
+            <basic name="telefono">
+                <column name="Telefono"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

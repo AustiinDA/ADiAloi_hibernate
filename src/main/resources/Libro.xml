@@ -2,7 +2,7 @@
 <entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
                  version="3.0">
 
-    <entity class="Hibernate.LibrosEntity">
+    <entity class="Hibernate.Libro">
         <table name="libros" schema="biblioteca" catalog=""/>
         <attributes>
             <id name="idLibro">

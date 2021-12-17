@@ -15,7 +15,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="default" />
+          <factory-entry name="default" value="bffad02b-df16-4c62-a3d6-2429bec81a4c" />
           <factory-entry name="noname-a.xml@0" value="ba1593a4-f022-4ecf-add5-871dd4a2d021" />
         </datasource-mapping>
         <naming-strategy-map />
@@ -32,6 +32,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
+      <excludeFolder url="file://$MODULE_DIR$/src/main/java/CreacionBD" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
